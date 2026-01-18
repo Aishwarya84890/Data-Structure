@@ -1,0 +1,25 @@
+
+package Largest;//to find the max element
+class Larger {
+	public static  int findLargestElement(int[]arr,int n) {//to create method with return type and arguments
+		int max=arr[0];
+		for(int i=1;i<n;i++) {
+			//iterate the entire loop
+			if(arr[i] > max) {
+				max=arr[i];
+				
+			}
+		}
+		
+		return max;
+	
+	}
+
+	public static void main(String[] args) {//main method
+		int []arr= {2,5,1,3,0};
+		int n= arr.length;
+		int max=Larger.findLargestElement(arr,  n);
+		System.out.println("the largest element is :"+max);
+
+	}
+}
