@@ -1,0 +1,27 @@
+package Solution;
+class Ssmallest{
+	public static int secondsmaller (int[]arr,int n) {
+		if(n<2)
+			return -1;
+		int smaller=Integer.MAX_VALUE;
+		int second_smaller=Integer.MAX_VALUE;
+		for(int i = 1;i<n;i++) {
+			if(arr[i]<smaller) {
+				second_smaller=smaller;
+				smaller=arr[i];
+			}
+		}
+		return second_smaller;
+		
+	}
+	public static void main(String[] args) {
+	int[] arr= {3,4,7,9,2,1,5};
+	int n =arr.length;
+	int second_smaller=Ssmallest.secondsmaller (arr, n);
+	System.out.println("This is the second smaller element"+second_smaller);
+	
+	}
+	}
+
+
+
