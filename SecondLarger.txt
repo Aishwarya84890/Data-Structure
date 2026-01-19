@@ -1,0 +1,26 @@
+package Solution;
+
+public class Slarger {
+	public static int secondlarger(int []arr,int n) {
+		if(n<2)
+			return -1;
+		int larger=Integer.MIN_VALUE;
+		int second_larger=Integer.MIN_VALUE;
+		for(int i = 1;i<n;i++){
+			if(arr[i]>larger) {
+				second_larger=larger;
+				larger=arr[i];
+				
+			}else if(arr[i]>second_larger && arr[i]!=larger) {
+				second_larger=arr[i];
+			}
+			
+		}return second_larger;
+}
+	public static void main(String[] args) {
+		int[]arr= {3,4,6,2,7,9};
+		int n=arr.length;
+		int second_larger=Slarger.secondlarger(arr,n);
+		System.out.println("The second larger element is "+second_larger);
+	}
+}
