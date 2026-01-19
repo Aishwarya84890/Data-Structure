@@ -1,0 +1,19 @@
+package Solution;
+
+
+public class  SortedArray {
+	public static boolean array(int[]arr,int n) {
+		for(int i = 1;i<n;i++) {
+			if(arr[i]<arr[i-1]) {
+				return false;
+			}
+		}
+		return true;
+	}
+	public static void main(String[] args) {
+		int[]arr= {1,2,3,4,5,6};
+		int n=arr.length;
+		SortedArray obj=new SortedArray();
+		System.out.println(SortedArray.array(arr, n)?"true":"false");
+	}
+}
