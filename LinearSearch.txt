@@ -1,0 +1,24 @@
+package Solution;
+
+public class LinearSearch{
+	public static  int LinearSearchL(int[]arr,int n,int target) {
+		for(int i = 0;i<n;i++) {
+			if(arr[i]==target) {
+				return i;
+			}
+			
+		}
+		return -1;
+	}
+	public static void main(String[] args) {
+		int[]arr= {10,20,30,40,50};
+		int n=arr.length;
+		int target=20;
+		int result=LinearSearch.LinearSearchL(arr,n, target);
+		if(result!=-1) {
+			System.out.println("The target is found at the positioon"+ result);
+		}else{
+		System.out.println("the target is not found");	
+		}
+	}
+}
