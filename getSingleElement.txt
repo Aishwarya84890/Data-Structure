@@ -1,0 +1,13 @@
+package Solution;
+
+public class getSingleElement {
+	public int getSingleElement(int []arr) {
+		int xor=0;
+		for(int nums:arr) {
+			xor^=nums;
+			
+		}
+		return xor;
+	
+	}
+}
