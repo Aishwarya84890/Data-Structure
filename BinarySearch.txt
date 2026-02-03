@@ -1,0 +1,33 @@
+package Solution;
+public class BinarySearch {
+	public  static int binarSearch(int[]arr,int target,int n) {
+	
+		int low=0;int high=n-1;
+		while(low<=high) {
+			int mid=high+low/2;
+			if(arr[mid]==target) {
+				return mid;
+				
+			}else if(arr[mid]>target) {
+				high=mid-1;
+			}else {
+				low=mid+1;
+			}
+		}
+		return -1;
+		
+	}
+	public static void main(String[] args) {
+		int[]arr= {3,4,6,7,9,12,16,17};
+		int target=6;
+		int n=arr.length;
+		int ind=BinarySearch.binarSearch(arr, target,n);
+		if(ind==-1) {
+			System.out.println("The target is not present ");
+		}
+		else {
+			System.out.println("The target is present at index :"+ind);
+		}
+	}
+
+}
